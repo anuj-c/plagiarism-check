@@ -104,9 +104,11 @@ const App = () => {
 
 	const handleSubmit = () => {
 		axios
-			.post("http://localhost:3001/data", {
-				doc1: doc1,
-				doc2: doc2,
+			.get("http://localhost:3001/data", {
+				params: {
+					doc1: doc1,
+					doc2: doc2,
+				},
 			})
 			.then((res) => {
 				console.log(res);
@@ -180,12 +182,28 @@ const App = () => {
 					justifyContent: "space-around",
 				}}
 			>
-				<Grid item xs={3} sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+				<Grid
+					item
+					xs={3}
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<Typography variant="h4" sx={{ fontWeight: "bold" }}>
 						SCANNED
 					</Typography>
 				</Grid>
-				<Grid item xs={3} sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+				<Grid
+					item
+					xs={3}
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<Typography variant="h6" sx={{ fontWeight: "bold" }}>
 						TOTAL WORDS
 					</Typography>
@@ -193,7 +211,15 @@ const App = () => {
 						{doc1.length ? doc1.trim().split(" ").length : 0}
 					</Typography>
 				</Grid>
-				<Grid item xs={3} sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+				<Grid
+					item
+					xs={3}
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<PieChart
 						data={pieData}
 						// totalValue={100}
@@ -221,7 +247,14 @@ const App = () => {
 						radius={50}
 					/>
 				</Grid>
-				<Grid item sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+				<Grid
+					item
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
+				>
 					<Typography
 						variant="h4"
 						sx={{ fontWeight: "bold" }}
@@ -238,7 +271,7 @@ const App = () => {
 					>
 						Match
 					</Typography>
-				</Grid >
+				</Grid>
 			</Grid>
 		);
 	};
