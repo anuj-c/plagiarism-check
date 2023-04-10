@@ -104,7 +104,7 @@ const App = () => {
 
 	const handleSubmit = () => {
 		axios
-			.get("http://localhost:3001/data", {
+			.get("http://169.254.129.2:3001/data", {
 				params: {
 					doc1: doc1,
 					doc2: doc2,

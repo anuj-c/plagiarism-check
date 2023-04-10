@@ -10,9 +10,9 @@ import pandas as pd
 import numpy as np
 from numpy.linalg import norm
 
-# nltk.download('stopwords')
-# nltk.download('punkt')
-# nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 stop_words = stopwords.words('english')
 removing_words = ["don't", "aren't", "couldn't", "didn't", "doesn't", "hadn't", "hasn't", "haven't", "isn't", "mightn't", "mustn't", "needn't", "shan't", "shouldn't", "wasn't", "weren't", "won't", "wouldn't", "no", "nor", "not"]
